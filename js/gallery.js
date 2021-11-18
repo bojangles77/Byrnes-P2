@@ -74,7 +74,6 @@ mRequest.onReadyStateChange = function () {
   } else if (mRequest.readyState === 4) {
     console.log("could not fetch data");
   }
-});
 
 mRequest.open("GET", mUrl, true);
 mRequest.send();

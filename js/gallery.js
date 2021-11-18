@@ -67,8 +67,6 @@ var mCurrentIndex = 0;
 function fetchJSON(){
   var mRequest = new XMLHttpRequest();
 mRequest.onReadyStateChange = function () {
-
-
   if (mRequest.readyState === 4 && request.status === 200) {
     mJson = JSON.parse(mRequest.responseText);
     console.log(mJson);
@@ -100,7 +98,7 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = '../images.json';
+var mUrl = 'images.json';
 
 
 

@@ -66,7 +66,9 @@ var mCurrentIndex = 0;
 
 function fetchJSON(){
   var mRequest = new XMLHttpRequest();
-mRequest.addEventListener("readystatechange", () => {
+mRequest.onReadyStateChange = function () {
+
+
   if (mRequest.readyState === 4 && request.status === 200) {
     mJson = JSON.parse(mRequest.responseText);
     console.log(mJson);
@@ -78,6 +80,7 @@ mRequest.addEventListener("readystatechange", () => {
 
 mRequest.open("GET", mUrl, true);
 mRequest.send();
+}
 }
 
 

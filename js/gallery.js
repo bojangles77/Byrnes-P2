@@ -36,7 +36,7 @@ function swapPhoto() {
   if (mCurrentIndex >= mImages.length) {
     mCurrentIndex = 0;
   }
-  if (index < 0) {
+  if (mCurrentIndex < 0) {
     mCurrentIndex = mImages.length - 1;
   }
 	//Add code here to access the #slideShow element.
@@ -62,9 +62,10 @@ var mCurrentIndex = 0;
 
 
 // XMLHttpRequest variable
-var mRequest = new XMLHttpRequest();
+// var mRequest = new XMLHttpRequest();
 
 function fetchJSON(){
+  var mRequest = new XMLHttpRequest();
 mRequest.addEventListener("readystatechange", () => {
   if (mRequest.readyState === 4 && request.status === 200) {
     mJson = JSON.parse(mRequest.responseText);
@@ -83,7 +84,7 @@ mRequest.send();
 
 // Array holding GalleryImage objects (see below).
 var mImages = [];
-  
+
 
 
 

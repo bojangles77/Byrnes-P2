@@ -78,7 +78,6 @@ mRequest.onReadyStateChange = function () {
 mRequest.open("GET", mUrl, true);
 mRequest.send();
 }
-}
 
 
 

@@ -123,6 +123,13 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 
 $(document).ready( function() {
 
+  $( "#nextPhoto" ).position({
+    my: "right bottom",
+    at: "right bottom",
+    of: "#nav"
+  });
+
+
   fetchJSON();
 
 

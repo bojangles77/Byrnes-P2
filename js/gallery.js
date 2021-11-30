@@ -33,7 +33,7 @@ function animate() {
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
 
 function swapPhoto() {
-  
+
   if(mCurrentIndex >= mImages.length)
   {
     mCurrentIndex = 0;
@@ -50,6 +50,20 @@ function swapPhoto() {
 
   mLastFrameTime = 0;
   mCurrentIndex += 1;
+}
+
+function toggleDetails()
+{
+  if($(".moreIndicator").hasClass("rot90"))
+  {
+    $(".moreIndicator").removeClass("rot90")
+    $(".moreIndicator").addClass("rot270")
+  }
+  else {
+    $(".moreIndicator").removeClass("rot270")
+    $(".moreIndicator").addClass("rot90")
+  }
+  $(".moreIndicator").slideToggle("slow", "linear")
 }
 
 // Counter for the mImages array

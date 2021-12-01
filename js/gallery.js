@@ -129,9 +129,18 @@ $(document).ready( function() {
     of: "#nav"
   });
 
+const urlParams = new URLSearchParams(window.location.search);
+
+for (const [key, value] of urlParams) z{
+  console.log(`${key}:${value}`);
+  mUrl = value
+}
+if (mUrl == undefined)
+{
+  mUrl = 'images.json';
+}
 
   fetchJSON();
-
 
 	// This initially hides the photos' metadata information
 	// $('.details').eq(0).hide();
